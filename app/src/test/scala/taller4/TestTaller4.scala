@@ -12,7 +12,23 @@ import org.scalatestplus.junit.JUnitRunner
 
 @RunWith(classOf[JUnitRunner])
 class TestTaller4 extends AnyFunSuite{
-    test("testTaller4"){
-        assert("Taller 4 2023-II" == Taller4.saludo())
+    test("Caso 1: Prueba de solucionIngenua con valores pequeños") {
+        val resultado = Taller4.sumaIngenuaSecuencial(2,3)
+        assert(resultado == 6)
+    }
+
+    test("Caso 2: Prueba de solucionRecursiva con valores pequeños") {
+        val resultado = Taller4.sumaRecursivaSecuencial(2, 3)
+        assert(resultado == 6)
+    }
+
+    test("Caso 3: Prueba de solucionIngenua con valores grandes") {
+        val resultado = Taller4.sumaIngenuaSecuencial(100, 1000)
+        assert(resultado == 100000)
+    }
+
+    test("Caso 4: Prueba de solucionRecursiva con valores grandes") {
+        val resultado = Taller4.sumaRecursivaSecuencial(100, 1000)
+        assert(resultado ==  100000)
     }
 }
